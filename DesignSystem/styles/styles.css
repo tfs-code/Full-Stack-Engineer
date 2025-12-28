@@ -1,0 +1,129 @@
+#heading {
+  text-align: center;
+}
+#cHeading {
+  text-align: center;
+}
+
+#colors ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  border: 1px solid black;
+  padding: 40px;
+  height: 200px;
+  margin: 0 400px;
+}
+
+#colors ul li {
+  list-style: none;
+
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pink {
+  background-color: #f6c1cc;
+}
+
+#cream {
+  background-color: #ffd6b0;
+}
+
+#yellow {
+  background-color: #fff1b8;
+}
+
+#green {
+  background-color: #cdede1;
+}
+
+#blue {
+  background-color: #c7ddf2;
+}
+
+#lavender {
+  background-color: #e3d7f4;
+}
+
+#fonts ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  border: 1px solid black;
+  padding: 40px;
+  margin: 0 400px;
+}
+
+#fonts ul li {
+  list-style: none;
+
+  width: 250px;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+#openSans {
+  font-family: "Open Sans", sans-serif;
+}
+
+#roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+#sourceCodePro {
+  font-family: "Source Code Pro", sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#textStyles ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  border: 1px solid black;
+  padding: 40px;
+  margin: 0 400px;
+}
+
+#textStyles ul li {
+  list-style: none;
+
+  width: 250px;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+#textStyles h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+#textStyles h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#textStyles .body-text {
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  font-weight: 400;
+}
