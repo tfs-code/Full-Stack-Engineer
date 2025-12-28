@@ -1,0 +1,40 @@
+html {
+  background-color: antiquewhite;
+}
+
+h1,
+h2 {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+
+table {
+  margin: 0px auto;
+}
+
+th,
+tr,
+td,
+table {
+  border: solid black 1px;
+  border-collapse: collapse;
+  font-family: Helvetica, sans-serif;
+  padding: 10px;
+}
+
+th {
+  background-color: lightblue;
+}
+
+tr,
+td {
+  background-color: aliceblue;
+}
+
+.codex {
+  color: purple;
+}
+
+.desc {
+  text-align: center;
+}
