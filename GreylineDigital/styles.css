@@ -1,0 +1,163 @@
+html {
+  font-family: Roboto, sans-serif;
+  background-color: #ffffff;
+}
+
+h1 {
+  color: #2b2b2b;
+}
+
+h2 {
+  color: #6b6b6b;
+}
+
+p {
+  color: #1f1f1f;
+}
+
+header {
+  background-color: #8fafcb;
+  display: flex;
+  width: auto;
+  height: 100px;
+  justify-content: space-between;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+header nav a {
+  padding: 10px;
+}
+
+header img {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+  margin-left: 10px;
+}
+
+#about {
+  display: flex;
+  justify-content: space-between;
+  background-color: #8fafcb;
+  align-items: center;
+  margin: 0px 0px 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-image: url(../GreylineDigital/images/about.jpg);
+  background-size: cover;
+  height: 400px;
+}
+
+#aboutText {
+  margin: 10px 10px;
+  background-color: #8fafcb;
+  padding: 10px;
+  border-radius: 10px;
+  height: 200px;
+}
+
+#about img {
+  margin: 10px 10px;
+  height: 50%;
+  width: auto;
+  background-color: #8fafcb;
+  padding: 10px;
+  border-radius: 10px;
+  height: 200px;
+}
+
+#services {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-image: url("../GreylineDigital/images/programmer.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+#services h1 {
+  color: #f7f7f7;
+}
+
+#servicesFlexContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0%;
+}
+
+#servicesFlexContainer li {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 500px;
+  height: 200px;
+  text-align: center;
+  margin: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #8fafcb;
+  opacity: 1;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#servicesFlexContainer li h2 {
+  color: #2b2b2b;
+}
+
+#servicesFlexContainer li p {
+  color: #2b2b2b;
+}
+
+#testimonial {
+  display: flex;
+  justify-content: space-around;
+  background-color: #8fafcb;
+  align-items: center;
+  margin: 20px 0px;
+  border-radius: 10px;
+  background-image: url("../GreylineDigital/images/banner.jpg");
+  background-size: cover;
+}
+
+#testimonial h1 {
+  text-align: center;
+  background-color: #8fafcb;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#testimonialItemContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+}
+
+.testimonialItem {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #8fafcb;
+  height: auto;
+  width: 500px;
+  font-size: 20px;
+}
+
+#contact {
+  background-color: #8fafcb;
+  border-radius: 10px;
+  padding: 10px;
+}
