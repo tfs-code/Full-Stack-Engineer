@@ -1,0 +1,163 @@
+header {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header img {
+  width: 200px;
+  height: auto;
+  margin: auto;
+}
+
+header #nav {
+  list-style-type: none;
+  text-align: center;
+  height: auto;
+  width: 400px;
+  display: flex;
+  align-self: center;
+  gap: 2em;
+  background-color: gray;
+  padding: 1em;
+  border-radius: 20px;
+}
+header #nav li {
+  background-color: #f97316;
+  height: 50px;
+  width: 200px;
+  border-radius: 20px;
+  text-align: center;
+  align-content: center;
+}
+
+body {
+  background: #111;
+  color: #ededed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2 {
+  color: #ededed;
+}
+
+p,
+li {
+  color: #ffffff;
+}
+
+.meetup-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+}
+
+a,
+button {
+  color: #ffffff;
+  background: #f97316;
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  background: #ea580c;
+}
+
+#about {
+  background-color: gray;
+  border-radius: 20px;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+}
+
+#about ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+#about ul li {
+  line-height: 2em;
+  text-align: center;
+}
+
+div {
+  background-color: #f97316;
+  border-radius: 20px;
+  padding: 1em;
+  margin: 1em;
+}
+
+#meetup {
+  background-color: gray;
+}
+
+.meetupHeader {
+  text-align: center;
+}
+
+.meetupGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.meetupCard {
+  background-color: #ea580c;
+}
+
+footer {
+  background-color: gray;
+  border-radius: 20px;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+}
+
+/** Mobile Display */
+@media screen and (max-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+
+  header img {
+    margin: 0 auto;
+  }
+
+  header #nav {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  header #nav li {
+    width: 100%;
+  }
+
+  .meetupGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .meetupCard {
+    width: min(320px, 100%);
+  }
+
+  #meetup {
+    margin: 0 2rem;
+  }
+}
