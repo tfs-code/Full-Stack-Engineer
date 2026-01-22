@@ -37,14 +37,33 @@ function pAequorFactory(num, arr) {
                 `Specimen ${this._specimenNum} and Specimen ${other._specimenNum} have DNA that is ${similarFrac.toPrecision(3)}% similar.`,
             );
         },
+        willLikelySurvive() {
+            let count = 0;
+            for (let i = 0; i < this._dna.length; i++) {
+                if (this._dna[i] === "C" || this._dna[i] === "G") {
+                    count++;
+                }
+            }
+            let percent = (count / this._dna.length) * 100;
+            if (percent > 60) {
+                return true;
+            } else {
+                return false;
+            }
+        },
     };
     return pAequor;
 }
 
-const org1 = pAequorFactory(1, mockUpStrand());
-const org2 = pAequorFactory(2, mockUpStrand());
-console.log(org1._dna.join(" "));
-console.log(org2._dna.join(" "));
-org1.compareDNA(org2);
+let attempts = 0;
+var survivors = [];
 
-// STEP 6 CODECADEMY CONTINUE
+while (survivors.length < 30) {
+    attempts++;
+    const org = pAequorFactory(attempts, mockUpStrand());
+    if (org.willLikelySurvive()) {
+        survivors.push(org);
+    }
+}
+
+console.log(`Generated 30 survivors with ${attempts} attempts.`);
