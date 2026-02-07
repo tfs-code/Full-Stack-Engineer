@@ -21,78 +21,79 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3];
 
 // An array of all the arrays above
 const batch = [
-  valid1,
-  valid2,
-  valid3,
-  valid4,
-  valid5,
-  invalid1,
-  invalid2,
-  invalid3,
-  invalid4,
-  invalid5,
-  mystery1,
-  mystery2,
-  mystery3,
-  mystery4,
-  mystery5,
+    valid1,
+    valid2,
+    valid3,
+    valid4,
+    valid5,
+    invalid1,
+    invalid2,
+    invalid3,
+    invalid4,
+    invalid5,
+    mystery1,
+    mystery2,
+    mystery3,
+    mystery4,
+    mystery5,
 ];
 
 // Add your functions below:
 
 function isOdd(num) {
-  return num % 2 == 1;
+    return num % 2 == 1;
 }
 
 //Luhn Formula
 function validateCred(arr) {
-  let sum = 0;
-  for (let i = arr.length - 1; i >= 0; i--) {
-    let digit = arr[i];
-    if ((arr.length - 1 - i) % 2 === 1) {
-      digit *= 2;
-      if (digit > 9) digit -= 9;
+    let sum = 0;
+    for (let i = arr.length - 1; i >= 0; i--) {
+        let digit = arr[i];
+        if ((arr.length - 1 - i) % 2 === 1) {
+            digit *= 2;
+            if (digit > 9) digit -= 9;
+        }
+        sum += digit;
     }
-    sum += digit;
-  }
-  return sum % 10 === 0;
+    return sum % 10 === 0;
 }
 
 function findInvalidCards(arrNest) {
-  let invalidCards = [];
-  for (let i = 0; i < arrNest.length; i++) {
-    if (!validateCred(arrNest[i])) {
-      invalidCards.push(arrNest[i]);
+    let invalidCards = [];
+    for (let i = 0; i < arrNest.length; i++) {
+        if (!validateCred(arrNest[i])) {
+            invalidCards.push(arrNest[i]);
+        }
     }
-  }
-  return invalidCards;
+    return invalidCards;
 }
 
 function idInvalidCardCompanies(arrNest) {
-  let companies = [];
+    let companies = [];
 
-  for (let i = 0; i < arrNest.length; i++) {
-    switch (arrNest[i][0]) {
-      case 3:
-        if (!companies.includes("Amex (American Express)"))
-          companies.push("Amex (American Express)");
-        break;
-      case 4:
-        if (!companies.includes("Visa")) companies.push("Visa");
-        break;
-      case 5:
-        if (!companies.includes("Mastercard")) companies.push("Mastercard");
-        break;
-      case 6:
-        if (!companies.includes("Discover")) companies.push("Discover");
-        break;
-      default:
-        if (!companies.includes("Company not found"))
-          companies.push("Company not found");
+    for (let i = 0; i < arrNest.length; i++) {
+        switch (arrNest[i][0]) {
+            case 3:
+                if (!companies.includes("Amex (American Express)"))
+                    companies.push("Amex (American Express)");
+                break;
+            case 4:
+                if (!companies.includes("Visa")) companies.push("Visa");
+                break;
+            case 5:
+                if (!companies.includes("Mastercard"))
+                    companies.push("Mastercard");
+                break;
+            case 6:
+                if (!companies.includes("Discover")) companies.push("Discover");
+                break;
+            default:
+                if (!companies.includes("Company not found"))
+                    companies.push("Company not found");
+        }
     }
-  }
 
-  return companies;
+    return companies;
 }
 
 const invalid = findInvalidCards(batch);
