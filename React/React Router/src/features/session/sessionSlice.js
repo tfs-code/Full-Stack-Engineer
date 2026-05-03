@@ -1,24 +1,24 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export const sessionSlice = createSlice({
-  name: 'session',
-  initialState: {
-    user: {},
-    isLoggedIn: false
-  },
-  reducers: {
-    signUp: (state, action) => {
-      state.user = action.payload;
-      state.isLoggedIn = true;
+    name: "session",
+    initialState: {
+        user: { username: "Guest" },
+        isLoggedIn: false,
     },
-    editUser: (state, action) => {
-      state.user = action.payload;
+    reducers: {
+        signUp: (state, action) => {
+            state.user = action.payload;
+            state.isLoggedIn = true;
+        },
+        editUser: (state, action) => {
+            state.user = action.payload;
+        },
+        logOut: (state, action) => {
+            state.user = {};
+            state.isLoggedIn = false;
+        },
     },
-    logOut: (state, action) => {
-      state.user = {};
-      state.isLoggedIn = false;
-    }
-  }
 });
 
 export const selectCurrentUser = (state) => state.session.user;
